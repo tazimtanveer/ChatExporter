@@ -24,6 +24,11 @@ jobs:
         pip install --upgrade pip
         pip install Cython virtualenv buildozer
 
+    - name: Accept Android SDK Licenses
+      run: |
+        yes | $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager --licenses
+
+
     - name: Build APK
       run: |
         buildozer -v android debug
