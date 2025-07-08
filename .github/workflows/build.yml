@@ -25,14 +25,14 @@ jobs:
         pip install Cython virtualenv buildozer
 
     - name: Accept Android SDK Licenses
-      run:  y | $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager --licenses
+      run:  yes yes yes | $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager --licenses
 
-    - name: Build APK
-      run: |
-        buildozer -v android debug
+    # - name: Build APK
+    #   run: |
+    #     buildozer -v android debug
 
-    - name: Upload APK
-      uses: actions/upload-artifact@v4
-      with:
-        name: chatextractor-apk
-        path: bin/*.apk
+    # - name: Upload APK
+    #   uses: actions/upload-artifact@v4
+    #   with:
+    #     name: chatextractor-apk
+    #     path: bin/*.apk
