@@ -26,4 +26,4 @@ android.arch = armeabi-v7a
 android.accept_sdk_license = True
 android.accept_android_license = True
 # Required to avoid AIDL issues
-android.build_tools_version = 34.0.0
+android.build_tools_version = 33.0.2
